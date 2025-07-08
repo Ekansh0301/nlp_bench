@@ -49,7 +49,6 @@ This project explores syntactic variation in Hindi sentences using features insp
 ### `DATA/`
 
 * Contains feature files like surprisal scores, dependency lengths, and UID-based scores.
-* Some files are large and tracked with Git LFS.
 
 ### `RESULTS/`
 
