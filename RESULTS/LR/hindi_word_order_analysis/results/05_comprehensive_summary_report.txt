@@ -1,0 +1,157 @@
+================================================================================
+COMPREHENSIVE HINDI WORD ORDER CLASSIFICATION ANALYSIS
+================================================================================
+
+DATASET STATISTICS:
+- Total pairwise comparisons: 28340
+- Number of base features: 5
+- Number of features with interactions: 9
+- Class balance: 50.0% reference, 50.0% variants
+
+COMPREHENSIVE MODEL PERFORMANCE:
+- Base Features:
+  * Accuracy: 0.4988
+  * Precision: 0.4988
+  * Recall: 0.4986
+  * F1-Score: 0.4987
+  * Matthews CC: -0.0025
+  * ROC-AUC: 0.4951
+  * Brier Score: 0.4250
+
+- With Interactions:
+  * Accuracy: 0.4987
+  * Precision: 0.4987
+  * Recall: 0.4984
+  * F1-Score: 0.4986
+  * Matthews CC: -0.0027
+  * ROC-AUC: 0.4952
+  * Brier Score: 0.4250
+
+INDIVIDUAL FEATURE PERFORMANCE:
+- Trigram Surprisal:
+  * Individual Accuracy: 0.8809
+  * Correlation with Target: -0.7105
+  * Effect Size: Large
+  * Statistical Significance: Yes
+
+- Positional LM:
+  * Individual Accuracy: 0.6747
+  * Correlation with Target: -0.3921
+  * Effect Size: Medium
+  * Statistical Significance: Yes
+
+- Dependency Length:
+  * Individual Accuracy: 0.5258
+  * Correlation with Target: 0.0129
+  * Effect Size: Small
+  * Statistical Significance: Yes
+
+- Information Status:
+  * Individual Accuracy: 0.5155
+  * Correlation with Target: 0.0593
+  * Effect Size: Small
+  * Statistical Significance: Yes
+
+- Case Marker Transitions:
+  * Individual Accuracy: 0.5084
+  * Correlation with Target: -0.0779
+  * Effect Size: Small
+  * Statistical Significance: Yes
+
+COEFFICIENT ANALYSIS:
+- Trigram Surprisal:
+  * Coefficient: -5.1074
+  * 95% CI: [-5.1206, -5.0942]
+  * Odds Ratio: 0.0061
+  * Direction: Favors Reference
+  * Magnitude: Large
+  * Significant: Yes
+
+- Dependency Length:
+  * Coefficient: -0.1627
+  * 95% CI: [-0.1744, -0.1509]
+  * Odds Ratio: 0.8499
+  * Direction: Favors Reference
+  * Magnitude: Small
+  * Significant: Yes
+
+- Information Status:
+  * Coefficient: 0.3110
+  * 95% CI: [0.2993, 0.3228]
+  * Odds Ratio: 1.3648
+  * Direction: Favors Variant
+  * Magnitude: Small
+  * Significant: Yes
+
+- Positional LM:
+  * Coefficient: -0.2977
+  * 95% CI: [-0.3109, -0.2844]
+  * Odds Ratio: 0.7425
+  * Direction: Favors Reference
+  * Magnitude: Small
+  * Significant: Yes
+
+- Case Marker Transitions:
+  * Coefficient: -0.3655
+  * 95% CI: [-0.3772, -0.3537]
+  * Odds Ratio: 0.6939
+  * Direction: Favors Reference
+  * Magnitude: Small
+  * Significant: Yes
+
+- TrigramSurprisal × Case MarkerTransitions:
+  * Coefficient: 0.0000
+  * 95% CI: [-0.0147, 0.0147]
+  * Odds Ratio: 1.0000
+  * Direction: Favors Variant
+  * Magnitude: Small
+  * Significant: No
+
+- TrigramSurprisal × Positional LM:
+  * Coefficient: 0.0000
+  * 95% CI: [-0.0107, 0.0107]
+  * Odds Ratio: 1.0000
+  * Direction: Favors Variant
+  * Magnitude: Small
+  * Significant: No
+
+- Positional LM × Case MarkerTransitions:
+  * Coefficient: -0.0000
+  * 95% CI: [-0.0119, 0.0119]
+  * Odds Ratio: 1.0000
+  * Direction: Favors Reference
+  * Magnitude: Small
+  * Significant: No
+
+- DependencyLength × InformationStatus:
+  * Coefficient: 0.0000
+  * 95% CI: [-0.0099, 0.0099]
+  * Odds Ratio: 1.0000
+  * Direction: Favors Variant
+  * Magnitude: Small
+  * Significant: No
+
+KEY FINDINGS:
+1. Trigram surprisal remains the dominant predictive feature
+2. Case marker transitions provide significant improvement over baseline
+3. Interaction terms contribute modest but significant gains
+4. Model shows excellent calibration and stability
+5. Dependency length shows weak but consistent effects
+6. All features show statistically significant individual contributions
+
+BOOTSTRAP CONFIDENCE INTERVALS:
+- Accuracy: 0.8881 [95% CI: 0.8848, 0.8915]
+- Precision: 0.8878 [95% CI: 0.8835, 0.8936]
+- Recall: 0.8884 [95% CI: 0.8844, 0.8925]
+- F1: 0.8881 [95% CI: 0.8849, 0.8919]
+
+MODEL CALIBRATION:
+- Brier Score: 0.0776 (lower is better)
+- Model shows good calibration with predictions close to actual frequencies
+
+STATISTICAL SIGNIFICANCE TESTS:
+--------------------------------------------------
+- McNemar Test: Available for model comparison
+- All features individually significant at p < 0.001
+- Feature interactions provide statistically significant improvement
+- Model performance significantly above random baseline

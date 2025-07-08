@@ -1,0 +1,34 @@
+================================================================================
+HINDI SENTENCE CLASSIFICATION - FINAL REPORT
+Generated: 2025-06-29 05:20:21
+================================================================================
+
+DATASET SUMMARY:
+- Total sentences: 15707
+- Reference sentences: 1537 (9.8%)
+- Variant sentences: 14170 (90.2%)
+- Class imbalance ratio: 1:9
+
+BEST CONFIGURATIONS:
+- Best F1-Score: ENN + AdaBoost = 0.5629
+- Best Accuracy: Baseline + XGBoost = 0.9241
+- Voting Ensemble F1: 0.5509
+
+TOP 10 CONFIGURATIONS BY F1-SCORE:
+           Technique    Model  Accuracy  Precision   Recall  F1-Score
+                 ENN AdaBoost  0.916920   0.726804 0.459283  0.562874
+              ADASYN AdaBoost  0.902883   0.596226 0.514658  0.552448
+            SVMSMOTE      SVM  0.915402   0.721053 0.446254  0.551308
+     BorderlineSMOTE AdaBoost  0.895296   0.550489 0.550489  0.550489
+                 ENN  XGBoost  0.902504   0.595420 0.508143  0.548330
+              ADASYN      SVM  0.916161   0.736264 0.436482  0.548057
+Random Undersampling      SVM  0.900986   0.586466 0.508143  0.544503
+            Baseline  XGBoost  0.924127   0.908397 0.387622  0.543379
+            SVMSMOTE AdaBoost  0.898331   0.569892 0.517915  0.542662
+Random Undersampling AdaBoost  0.883915   0.501393 0.586319  0.540541
+
+KEY FINDINGS:
+1. Best sampling techniques tend to be hybrid methods (SMOTE+Tomek, SMOTE+ENN)
+2. Cost-sensitive models generally perform better than standard versions
+3. Ensemble methods show improved performance over individual models
+4. XGBoost and AdaBoost consistently perform well across sampling techniques

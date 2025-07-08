@@ -1,0 +1,23 @@
+================================================================================
+BASIC MODEL RESULTS
+================================================================================
+
+CROSS-VALIDATION RESULTS:
+----------------------------------------
+Base Features       : 88.81% (±0.65%)
+With Interactions   : 88.80% (±0.64%)
+
+FINAL MODEL PERFORMANCE:
+----------------------------------------
+Accuracy    : 0.8881
+Precision   : 0.8881
+Recall      : 0.8881
+F1-Score    : 0.8881
+
+CLASS DISTRIBUTION:
+Reference (y=1): 14170 (50.0%)
+Variants (y=0): 14170 (50.0%)
+
+PREDICTION DISTRIBUTION:
+Predicted Reference: 14170 (50.0%)
+Predicted Variants: 14170 (50.0%)

@@ -1,0 +1,21 @@
+======================================================================
+HINDI SENTENCE CLASSIFICATION - F1 OPTIMIZATION RESULTS
+======================================================================
+
+Best Single Model: SVM-SMOTE + XGBoost
+Best F1-Score: 0.5587
+
+Ensemble F1-Score: 0.5487
+
+Top 10 Results:
+      Technique    Model  Accuracy  Precision   Recall  F1-Score
+      SVM-SMOTE  XGBoost  0.904679   0.737968 0.449511  0.558704
+      SVM-SMOTE  SVM-RBF  0.902492   0.716495 0.452769  0.554890
+BorderlineSMOTE  SVM-RBF  0.893747   0.634454 0.491857  0.554128
+BorderlineSMOTE  XGBoost  0.887188   0.598394 0.485342  0.535971
+       Baseline  XGBoost  0.910363   0.898438 0.374593  0.528736
+      SMOTE+ENN  XGBoost  0.861390   0.485632 0.550489  0.516031
+       Baseline AdaBoost  0.910800   1.000000 0.335505  0.502439
+       Baseline  SVM-RBF  0.910800   1.000000 0.335505  0.502439
+      SVM-SMOTE AdaBoost  0.910800   1.000000 0.335505  0.502439
+BorderlineSMOTE AdaBoost  0.824661   0.402893 0.635179  0.493047

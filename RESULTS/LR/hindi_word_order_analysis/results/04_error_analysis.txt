@@ -1,0 +1,15 @@
+================================================================================
+ERROR ANALYSIS RESULTS
+================================================================================
+
+TOTAL ERRORS: 3172 (11.19%)
+CORRECT PREDICTIONS: 25168 (88.81%)
+
+FEATURE VALUES FOR ERRORS VS CORRECT PREDICTIONS:
+------------------------------------------------------------
+                Feature  Error_Mean  Error_Std  Correct_Mean  Correct_Std  Difference
+      Trigram Surprisal         0.0     2.6881           0.0      10.3043         0.0
+      Dependency Length         0.0     6.6766           0.0       9.3417         0.0
+     Information Status         0.0     0.6026           0.0       0.6231         0.0
+          Positional LM         0.0     0.1138           0.0       0.1516         0.0
+Case Marker Transitions         0.0     0.2027           0.0       0.3114         0.0

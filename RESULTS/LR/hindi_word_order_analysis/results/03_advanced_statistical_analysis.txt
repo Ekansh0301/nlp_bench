@@ -1,0 +1,40 @@
+================================================================================
+ADVANCED STATISTICAL ANALYSIS
+================================================================================
+
+COMPREHENSIVE MODEL EVALUATION:
+--------------------------------------------------
+            Model  Accuracy  Precision  Recall  F1-Score  Matthews CC  Cohen Kappa  Balanced Accuracy  ROC-AUC  Brier Score  Log Loss
+    Base Features    0.4988     0.4988  0.4986    0.4987      -0.0025      -0.0025             0.4988   0.4951        0.425    2.1603
+With Interactions    0.4987     0.4987  0.4984    0.4986      -0.0027      -0.0027             0.4987   0.4952        0.425    2.1602
+
+INDIVIDUAL FEATURE PERFORMANCE:
+--------------------------------------------------
+                Feature  Individual Accuracy  Std Dev  Contribution  Correlation with Target  Correlation P-value  KS Statistic  KS P-value Effect Size
+      Trigram Surprisal               0.8809   0.0073        0.3809                  -0.7105               0.0000        0.7685         0.0       Large
+          Positional LM               0.6747   0.0074        0.1747                  -0.3921               0.0000        0.3492         0.0      Medium
+      Dependency Length               0.5258   0.0079        0.0258                   0.0129               0.0305        0.0570         0.0       Small
+     Information Status               0.5155   0.0071        0.0155                   0.0593               0.0000        0.0368         0.0       Small
+Case Marker Transitions               0.5084   0.0079        0.0084                  -0.0779               0.0000        0.0304         0.0       Small
+
+FEATURE STATISTICS:
+--------------------------------------------------
+                Feature  Mean (Reference)  Mean (Variants)  Std (Reference)  Std (Variants)    Range  Skewness  Kurtosis
+      Trigram Surprisal           -6.9291           6.9291           6.8622          6.8622  67.5458       0.0    1.1656
+      Dependency Length            0.1167          -0.1167           9.0816          9.0816 192.0000       0.0   12.8654
+     Information Status            0.0368          -0.0368           0.6198          0.6198   2.0000       0.0   -0.4057
+          Positional LM           -0.0580           0.0580           0.1360          0.1360   1.6598       0.0    2.0372
+Case Marker Transitions           -0.0235           0.0235           0.3003          0.3003   3.2828       0.0   13.8529
+
+COEFFICIENT ANALYSIS:
+--------------------------------------------------
+                                  Feature  Coefficient  Std Error  CI Lower  CI Upper  Odds Ratio Significance        Direction Magnitude
+                        Trigram Surprisal      -5.1074     0.0067   -5.1206   -5.0942      0.0061          Yes Favors Reference     Large
+                        Dependency Length      -0.1627     0.0060   -0.1744   -0.1509      0.8499          Yes Favors Reference     Small
+                       Information Status       0.3110     0.0060    0.2993    0.3228      1.3648          Yes   Favors Variant     Small
+                            Positional LM      -0.2977     0.0068   -0.3109   -0.2844      0.7425          Yes Favors Reference     Small
+                  Case Marker Transitions      -0.3655     0.0060   -0.3772   -0.3537      0.6939          Yes Favors Reference     Small
+TrigramSurprisal × Case MarkerTransitions       0.0000     0.0075   -0.0147    0.0147      1.0000           No   Favors Variant     Small
+         TrigramSurprisal × Positional LM       0.0000     0.0054   -0.0107    0.0107      1.0000           No   Favors Variant     Small
+   Positional LM × Case MarkerTransitions      -0.0000     0.0061   -0.0119    0.0119      1.0000           No Favors Reference     Small
+     DependencyLength × InformationStatus       0.0000     0.0051   -0.0099    0.0099      1.0000           No   Favors Variant     Small

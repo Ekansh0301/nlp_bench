@@ -1,0 +1,28 @@
+======================================================================
+HINDI SENTENCE CLASSIFICATION - IMBALANCE HANDLING RESULTS
+======================================================================
+
+DATASET STATISTICS:
+- Total sentences: 15707
+- Reference sentences: 1537 (9.8%)
+- Variant sentences: 14170 (90.2%)
+- Class weights: {0: np.float64(0.5520568816658202), 1: np.float64(5.302439024390244)}
+
+TECHNIQUES TESTED:
+- Baseline: No imbalance handling
+- Undersampling: Random undersampling to 2460:1230 ratio
+- Cost-Sensitive: Cost-sensitive learning with weights {0: np.float64(0.5520568816658202), 1: np.float64(5.302439024390244)}
+- SMOTE: SMOTE oversampling
+- Borderline-SMOTE: Borderline SMOTE oversampling
+- ADASYN: ADASYN adaptive sampling
+
+BEST PERFORMERS:
+- Accuracy: Baseline + Gradient Boosting (0.9193)
+- Precision: Baseline + Logistic Regression (1.0000)
+- Recall: ADASYN + SVM (0.7785)
+- F1-Score: Undersampling + SVM (0.5121)
+
+RECOMMENDED APPROACH:
+- Best combination: Undersampling + SVM
+- F1-Score: 0.5121
+- Improvement over baseline: 0.0228

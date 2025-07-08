@@ -1,0 +1,32 @@
+================================================================================
+NON-LINEAR PATTERNS ANALYSIS RESULTS
+================================================================================
+
+MOTIVATION:
+----------------------------------------
+Random Forest outperforms Logistic Regression (89.64% vs 88.78%),
+suggesting the presence of non-linear relationships in the data.
+
+KEY FINDINGS:
+----------------------------------------
+1. FEATURE INTERACTIONS:
+   1. TrigramSurprisal × InformationStatus: Synergy = 0.187
+   2. TrigramSurprisal × DependencyLength: Synergy = 0.147
+   3. InformationStatus × Case MarkerTransitions: Synergy = 0.115
+   4. TrigramSurprisal × Case MarkerTransitions: Synergy = 0.115
+   5. TrigramSurprisal × Positional LM: Synergy = 0.106
+
+2. POLYNOMIAL REGRESSION RESULTS:
+   Degree 1: 88.80% with 5 features
+   Degree 2: 88.79% with 20 features
+   Degree 3: 89.21% with 55 features
+
+3. NON-LINEAR PATTERNS:
+   - Partial dependence plots show non-monotonic relationships
+   - Threshold effects observed in dependency length at extreme values
+   - Saturation effects in surprisal measures at high values
+
+4. IMPLICATIONS:
+   - Linear models may underestimate effects at extreme feature values
+   - Complex interactions between features contribute to predictive power
+   - Non-linearities align with cognitive processing theories

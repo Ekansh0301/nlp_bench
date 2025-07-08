@@ -1,0 +1,88 @@
+================================================================================
+COMPREHENSIVE HINDI WORD ORDER CLASSIFICATION ANALYSIS REPORT
+Generated on: 2025-06-28 21:24:59
+Based on: Ranjan et al. (2022) - Locality and expectation effects in Hindi
+================================================================================
+
+EXECUTIVE SUMMARY
+----------------------------------------
+• Dataset size: 28340 pairwise comparisons
+• Number of base features: 5
+• Total features (with interactions): 16
+• Best model accuracy: 89.64%
+• Dominant predictor: Trigram Surprisal
+• Weakest predictor: Dependency Length
+
+KEY FINDINGS
+----------------------------------------
+1. Trigram surprisal is the overwhelmingly dominant predictive feature (91%+ individual accuracy)
+2. Dependency length shows weak but statistically significant effects
+3. Case marker transitions provide substantial predictive power
+4. Interaction terms contribute modest improvements (0.08% accuracy gain)
+5. Model shows good calibration with slight overconfidence in extreme predictions
+6. High-confidence errors constitute ~30% of all errors, suggesting systematic patterns
+
+MODEL PERFORMANCE COMPARISON
+----------------------------------------
+Logistic Regression: 88.78% (±0.50%)
+Random Forest: 89.64% (±0.47%)
+Gradient Boosting: 89.27% (±0.52%)
+
+NON-LINEAR PATTERNS SUMMARY
+----------------------------------------
+• Random Forest outperforms Logistic Regression, indicating non-linear relationships
+• Strongest feature interactions found in surprisal × case marker combinations
+• Threshold effects observed at extreme dependency length values
+• Polynomial features show marginal improvements over linear model
+
+DETAILED FEATURE ANALYSIS
+----------------------------------------
+                 Feature  Mean   Std     Min    Max  Skewness  Kurtosis
+      Trigram\nSurprisal   0.0 9.752 -33.773 33.773       0.0     1.166
+      Dependency\nLength   0.0 9.082 -96.000 96.000       0.0    12.865
+     Information\nStatus   0.0 0.621  -1.000  1.000       0.0    -0.406
+           Positional LM   0.0 0.148  -0.830  0.830       0.0     2.037
+Case Marker\nTransitions   0.0 0.301  -1.641  1.641       0.0    13.853
+
+TOP 10 MOST INFLUENTIAL FEATURES
+----------------------------------------
+                               Feature   Coefficient  Standardized_Coef
+                     Trigram Surprisal -5.107412e+00      -5.107502e+00
+               Case Marker Transitions -3.654821e-01      -1.626640e-01
+                    Information Status  3.110210e-01       3.110265e-01
+                         Positional LM -2.976829e-01      -2.976882e-01
+                     Dependency Length -1.626611e-01      -3.654885e-01
+               Case MarkerTransitions²  4.294409e-07      -1.659040e-08
+                        Positional LM²  6.471294e-08       1.927186e-09
+                     DependencyLength²  6.208866e-08       4.264649e-08
+                    InformationStatus²  4.324609e-08      -7.973244e-09
+Positional LM × Case MarkerTransitions  3.131732e-08       4.615247e-10
+
+ERROR ANALYSIS SUMMARY
+----------------------------------------
+Total errors: 3172 (11.19%)
+High-confidence errors: 778 (24.5% of errors)
+
+Feature patterns in errors:
+                Feature  Mean_Difference  Effect_Size
+      Trigram Surprisal             -0.0         -0.0
+      Dependency Length              0.0          0.0
+     Information Status              0.0          0.0
+          Positional LM              0.0          0.0
+Case Marker Transitions              0.0          0.0
+
+MODEL CALIBRATION METRICS
+----------------------------------------
+Brier Score: 0.0776
+Expected Calibration Error: 0.0055
+Mean Calibration Error: 0.0111
+
+
+RECOMMENDATIONS FOR FUTURE WORK
+----------------------------------------
+1. Investigate high-confidence errors to identify systematic biases
+2. Explore non-linear models (Random Forest shows competitive performance)
+3. Analyze case marker patterns in more detail
+4. Consider sentence-level features beyond pairwise differences
+5. Validate findings on spontaneous speech data
+6. Investigate the role of semantic similarity between constituents

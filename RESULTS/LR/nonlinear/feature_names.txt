@@ -1,0 +1,16 @@
+Trigram Surprisal
+Dependency Length
+Information Status
+Positional LM
+Case Marker Transitions
+TrigramSurprisal × Case MarkerTransitions
+TrigramSurprisal × Positional LM
+Positional LM × Case MarkerTransitions
+DependencyLength × InformationStatus
+TrigramSurprisal × DependencyLength
+InformationStatus × Case MarkerTransitions
+TrigramSurprisal²
+DependencyLength²
+InformationStatus²
+Positional LM²
+Case MarkerTransitions²

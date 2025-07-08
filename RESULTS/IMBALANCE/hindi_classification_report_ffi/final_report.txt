@@ -1,0 +1,52 @@
+================================================================================
+HINDI SENTENCE CLASSIFICATION - FINAL REPORT
+Focus on AUC-ROC and PR-AUC Metrics
+Generated: 2025-06-29 06:20:55
+================================================================================
+
+DATASET SUMMARY:
+- Total sentences: 15707
+- Reference sentences: 1537 (9.8%)
+- Variant sentences: 14170 (90.2%)
+- Class imbalance ratio: 1:9
+
+BEST CONFIGURATIONS:
+- Best AUC-ROC: SMOTE + SVM = 0.7973
+- Best PR-AUC: Random Oversampling + AdaBoost = 0.5616
+- Best F1-Score: Tomek Links + Cost-Sensitive SVM = 0.5269
+
+- Voting Ensemble AUC-ROC: 0.7988
+- Voting Ensemble PR-AUC: 0.5672
+
+TOP 10 CONFIGURATIONS BY AUC-ROC:
+          Technique         Model  AUC-ROC   PR-AUC  F1-Score
+              SMOTE           SVM 0.797289 0.500665  0.449704
+Random Oversampling Easy Ensemble 0.795526 0.515561  0.400359
+Random Oversampling           SVM 0.793330 0.496596  0.439863
+           Baseline Easy Ensemble 0.793304 0.530290  0.420020
+     SMOTE_balanced Easy Ensemble 0.793103 0.472159  0.407713
+        SMOTE+Tomek Easy Ensemble 0.793103 0.472159  0.407713
+          SMOTE+ENN      RUSBoost 0.792506 0.473843  0.405850
+        Tomek Links Easy Ensemble 0.789849 0.549803  0.441777
+           SVMSMOTE           SVM 0.789682 0.483111  0.457143
+     SMOTE_balanced           SVM 0.787990 0.495586  0.398489
+
+TOP 10 CONFIGURATIONS BY PR-AUC:
+           Technique    Model   PR-AUC  AUC-ROC  F1-Score
+ Random Oversampling AdaBoost 0.561644 0.764829  0.437788
+ Random Oversampling  XGBoost 0.561432 0.771848  0.429733
+           SMOTE+ENN AdaBoost 0.559810 0.759788  0.341935
+            SVMSMOTE AdaBoost 0.559234 0.764795  0.451613
+Random Undersampling AdaBoost 0.558760 0.765739  0.437086
+            Baseline  XGBoost 0.556843 0.782598  0.493151
+            SVMSMOTE  XGBoost 0.556602 0.758449  0.504174
+         Tomek Links AdaBoost 0.554485 0.774039  0.489104
+                 ENN  XGBoost 0.552777 0.771671  0.510721
+         SMOTE+Tomek AdaBoost 0.552607 0.773236  0.418401
+
+KEY FINDINGS:
+1. AUC-ROC and PR-AUC provide better evaluation for imbalanced datasets
+2. PR-AUC is particularly important for this highly imbalanced dataset
+3. Sampling techniques with better balance (0.8 ratio) generally perform better
+4. Cost-sensitive models and ensemble methods show improved performance
+5. Hybrid sampling methods (SMOTE+Tomek, SMOTE+ENN) often achieve best results
