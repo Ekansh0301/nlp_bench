@@ -1,0 +1,31 @@
+Loading feature files...
+
+Creating pairwise comparisons...
+
+============================================================
+LOGISTIC REGRESSION WITH UID_Slope AND CORE FEATURES
+============================================================
+Final Accuracy            Accuracy: 89.02% ± 0.49%
+
+LEAVE-ONE-OUT ABLATION (Remove 1 feature)
+Without Trigram           Accuracy: 67.58% ± 0.94%
+Without IS                Accuracy: 88.84% ± 0.53%
+Without PLM               Accuracy: 88.87% ± 0.57%
+Without CaseMarker        Accuracy: 88.84% ± 0.51%
+Without UID_Slope         Accuracy: 88.80% ± 0.57%
+
+SINGLE FEATURE PERFORMANCE (Only 1 feature)
+Trigram                Only Accuracy: 88.15% ± 0.56%
+IS                     Only Accuracy: 51.62% ± 0.56%
+PLM                    Only Accuracy: 67.40% ± 0.98%
+CaseMarker             Only Accuracy: 51.03% ± 0.53%
+UID_Slope              Only Accuracy: 49.48% ± 1.07%
+
+============================================================
+FEATURE IMPORTANCE
+============================================================
+Trigram     : -5.1073
+IS          :  0.3240
+PLM         : -0.2868
+CaseMarker  : -0.3667
+UID_Slope   :  0.2240
