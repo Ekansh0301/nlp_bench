@@ -22,7 +22,7 @@ This project explores syntactic variation in Hindi sentences using features insp
 * **PLM Score (Positional Language Model)**
   Probability of a word given its position in the sentence (useful for modeling Hindi's flexible word order).
 
-* **UID (Uniform Information Density) Score** (to be uploaded)
+* **UID (Uniform Information Density) Score**
   Measures how evenly information is distributed across a sentence, based on per-word surprisal.
 
 ---
